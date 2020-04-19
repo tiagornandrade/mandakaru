@@ -99,4 +99,4 @@ def dashboard():
 
 if __name__ == "__main__":
     app.secret_key = "senhasecreta"
-    app.run(debug=True)
+    app.run(threaded=True, port=5000)
