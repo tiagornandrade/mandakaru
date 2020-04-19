@@ -99,5 +99,4 @@ def dashboard():
 
 if __name__ == "__main__":
     app.secret_key = "senhasecreta"
-    port = int(os.environ.get("PORT", 50000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(debug=True)
