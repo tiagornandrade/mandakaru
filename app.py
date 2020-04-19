@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, request, session, redirect
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 import bcrypt
+import os
 
 app = Flask(__name__)
 app.config['MONGO_DBNAME'] = 'db_web_social'
@@ -98,4 +99,5 @@ def dashboard():
 
 if __name__ == "__main__":
     app.secret_key = "senhasecreta"
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 50000))
+    app.run(host='0.0.0.0', port=port, debug=True)
