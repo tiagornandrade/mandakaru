@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Mandakaru</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/signin.css" rel="stylesheet">
+  </head>
+
+  <header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="login">Mandakaru</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+        </div>
+  </nav>
+</header>
+
+  <body class="text-center">
+    <form class="form-signin" action="" method="POST">
+      <img class="mb-4" src="/static/assets/img/cactus.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal"></h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="text" class="form-control" name="username" placeholder="Usuário"> 
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" class="form-control" name="password" placeholder="Senha">
+      <input class="btn btn-lg btn-primary btn-block" type="submit" value="Registrar">
+
+      <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+    </form>
+    {% if error %}
+      <p class="error"><strong>Error:</strong> {{ error }}
+    {% endif %}
+  </body>
+</html>
