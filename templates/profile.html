@@ -1,162 +1,128 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<title>Mandakaru</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-/* Header/logo Title */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-}
+    <title>Mandakaru</title>
 
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/">
 
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
 
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
+    <!-- Custom styles for this template -->
+    <link href="/static/home.css" rel="stylesheet">
+  </head>
 
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
+  <!---->
+  <header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+          <a class="navbar-brand" href="home">Mandakaru</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+              </ul>
+          </div>
+    </nav>
+  </header>
+  <!---->
 
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
+<!---->
+<body class="bg-light">
 
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
+  <!---->
+  <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="">Mandakaru</a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav ml-auto">       
+        <li class="nav-item">
+          <a class="nav-link" href="home">{{ session['username'] }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Notificações</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="profile">Perfil <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="logout">Sair</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!---->
 
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
-</head>
-<body>
-
-    <header>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-            <a class="navbar-brand" href="home">Mandakaru</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                </ul>
-            </div>
-      </nav>
-    </header>
-
-<div class="row">
-  <div class="side">
-    <h2>About Me</h2>
-    <h5>Photo of me:</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
+  <!---->
+  <div class="nav-scroller bg-white box-shadow">
+    <nav class="nav nav-underline">
+      <a class="nav-link" href="#">
+        Amigos
+        <span class="badge badge-pill bg-light align-text-bottom"> {{ user_number }} </span>
+      </a>
+      <a class="nav-link" href="#">Explorar</a>
+      <a class="nav-link" href="#">Sugestões</a>
+    </nav>
   </div>
-  <div class="main">
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
-</div>
+  <!---->
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+  <!---->
+  <main role="main" class="container">
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark rounded box-shadow">
+      <img class="mr-3" src="/static/assets/img/cactus.png" alt="" width="48" height="48">
+      <div class="lh-100">
+        <h6 class="mb-0 text-white lh-100">Mandakaru</h6>
+        <small>Desde 2020</small>
+      </div>
+    </div>
+  <!---->
+
+  <br>
+
+  <!---->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active">Perfil</a>
+      <br>  
+        <div class="container-fluid container-posts">
+          <div class="card-post">
+            <ul class="profile-data">
+              {% for user_profile in users %}
+              <b>Nome:</b> {{ user_profile['name'] }} <br>
+              <b>Nome de usuário:</b> {{ user_profile['username'] }} <br>
+              <b>Cidade:</b> {{ user_profile['city'] }} <br>
+              <b>Estado:</b> {{ user_profile['state'] }} <br>
+              <b>Descrição:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+              {% endfor %}
+            </ul>
+            <br>
+            <p><a href="" title="edit profile"><i class="fa fa-pencil" aria-hidden="true"></i> Editar perfil</a></p>
+          </div>
+        </div>
+      </li>
+    
+  </ul>
+
 
 </body>
+<!---->
+
 </html>
