@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 app.config['MONGO_DBNAME'] = 'db_web_social'
 app.config["MONGO_URI"] = "mongodb://localhost:27017/db_web_social"
-#"mongodb+srv://tiago:Ribeiro83@@cluster0-kwb0e.azure.mongodb.net/db_web_social" 
+#"mongodb+srv://tiago:Ribeiro83@cluster0-kwb0e.azure.mongodb.net/db_web_social" 
 
 mongo = PyMongo(app)
 
