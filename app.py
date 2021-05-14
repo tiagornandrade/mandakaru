@@ -5,8 +5,8 @@ import bcrypt
 import os
 
 app = Flask(__name__)
-app.config['MONGO_DBNAME'] = 'db_web_social'
-app.config["MONGO_URI"] = "mongodb+srv://tiago:SenhaDev1234@cluster0.kwb0e.mongodb.net/db_web_social?authSource=admin&replicaSet=atlas-27kj6t-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+# app.config['MONGO_DBNAME'] = 'db_web_social'
+# app.config["MONGO_URI"] = "mongodb+srv://tiago:SenhaDev1234@cluster0.kwb0e.mongodb.net/db_web_social?authSource=admin&replicaSet=atlas-27kj6t-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/db_web_social"
 
 mongo = PyMongo(app)
